@@ -39,6 +39,9 @@ A turn-based, time-focused racing game simulation built with **Avalonia UI** and
 ### Build and Run
 
 ```bash
+#clone the repo
+git clone https://github.com/ZeeyahOke/CsharpSpeedRush
+
 # Navigate to project directory
 cd SpeedRush
 
@@ -57,4 +60,4 @@ dotnet test
 
 ## Author
 
-Fawziyyah Oke for Programming in C# module.
+Fawziyyah Oke for the Programming in C# module.
