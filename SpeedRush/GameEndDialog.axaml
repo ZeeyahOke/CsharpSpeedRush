@@ -1,0 +1,52 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SpeedRush.GameEndDialog"
+        Title="Race Complete"
+        Width="500"
+        Height="400"
+        Background="#1e1e1e"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Text="RACE COMPLETE!" FontSize="24" FontWeight="Bold" Foreground="#00ff00" TextAlignment="Center" Margin="20,15,20,10" />
+        
+        <!-- Status Message -->
+        <TextBlock Grid.Row="0" x:Name="StatusMessage" Text="" FontSize="13" Foreground="#ffff00" TextAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" Margin="20,40,20,0" />
+        
+        <!-- Scrollable Statistics -->
+        <ScrollViewer Grid.Row="1" Margin="15,10,15,10" VerticalScrollBarVisibility="Auto">
+            <Border BorderBrush="#00ff00" BorderThickness="2" Padding="15" Background="#1a1a1a">
+                <StackPanel Spacing="12">
+                    <!-- Laps Completed -->
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Laps Completed" FontSize="12" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="LapsLabel" Text="5/5" FontSize="14" Foreground="#ffffff" />
+                    </StackPanel>
+
+                    <!-- Progress -->
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Lap Progress" FontSize="12" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="ProgressLabel" Text="100%" FontSize="14" Foreground="#ffffff" />
+                    </StackPanel>
+
+                    <!-- Fuel Used -->
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Fuel Used" FontSize="12" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="FuelUsedLabel" Text="0.0L" FontSize="14" Foreground="#ff6600" />
+                    </StackPanel>
+
+                    <!-- Time Spent -->
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Time Spent" FontSize="12" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="TimeSpentLabel" Text="0s" FontSize="14" Foreground="#0099ff" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+
+        <!-- OK Button -->
+        <Button Grid.Row="2" x:Name="OkButton" Content="OK" Width="130" Padding="10" FontSize="13" Background="#00aa00" Foreground="#ffffff" HorizontalAlignment="Center" Margin="0,0,0,15" Click="OnOkClick" />
+    </Grid>
+</Window>

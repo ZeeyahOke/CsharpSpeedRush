@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SpeedRush.MainWindow"
+        Title="C# Speed Rush - Racing Game"
+        Width="800"
+        Height="650"
+        Background="#1e1e1e">
+
+    <ScrollViewer>
+        <StackPanel Spacing="20" Margin="20" Background="#2d2d2d">
+            <!-- Title -->
+            <TextBlock Text="C# Speed Rush" FontSize="32" FontWeight="Bold" Foreground="#00ff00" TextAlignment="Center" />
+            
+            <!-- Car Selection -->
+            <StackPanel Spacing="10">
+                <TextBlock Text="Select Your Car:" FontSize="18" Foreground="#ffffff" FontWeight="Bold" />
+                <ComboBox x:Name="CarComboBox" Width="300" Padding="10" FontSize="14" />
+                <Button x:Name="StartButton" Content="Start Race" Width="150" Padding="10" FontSize="14" Background="#00aa00" Foreground="#ffffff" Click="OnStartRaceClick" />
+            </StackPanel>
+
+            <!-- Race Status -->
+            <Border BorderBrush="#00ff00" BorderThickness="2" Padding="15" Background="#1a1a1a">
+                <StackPanel Spacing="15">
+                    <!-- Lap Display -->
+                    <StackPanel Spacing="5">
+                        <TextBlock Text="Lap Progress" FontSize="14" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="LapLabel" Text="Lap: 1/5" FontSize="16" Foreground="#ffffff" />
+                        <ProgressBar x:Name="LapProgressBar" Height="20" Background="#333333" Foreground="#00ff00" />
+                    </StackPanel>
+
+                    <!-- Fuel Display -->
+                    <StackPanel Spacing="5">
+                        <TextBlock Text="Fuel Level" FontSize="14" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="FuelLabel" Text="Fuel: 50.0L / 50.0L" FontSize="16" Foreground="#ffffff" />
+                        <ProgressBar x:Name="FuelProgressBar" Height="20" Background="#333333" Foreground="#ff6600" />
+                    </StackPanel>
+
+                    <!-- Time Display -->
+                    <StackPanel Spacing="5">
+                        <TextBlock Text="Time Remaining" FontSize="14" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="TimeLabel" Text="Time: 600.0s" FontSize="16" Foreground="#ffffff" />
+                        <ProgressBar x:Name="TimeProgressBar" Height="20" Background="#333333" Foreground="#0099ff" />
+                    </StackPanel>
+
+                    <!-- Speed Display -->
+                    <StackPanel Spacing="5">
+                        <TextBlock Text="Current Speed" FontSize="14" Foreground="#00ff00" FontWeight="Bold" />
+                        <TextBlock x:Name="SpeedLabel" Text="Speed: 0 km/h" FontSize="16" Foreground="#ffffff" />
+                    </StackPanel>
+
+                    <!-- Race Status -->
+                    <TextBlock x:Name="StatusLabel" Text="Ready to start" FontSize="14" Foreground="#ffff00" />
+                </StackPanel>
+            </Border>
+
+            <!-- Action Buttons -->
+            <StackPanel Spacing="10" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="SpeedUpButton" Content="Speed Up" Width="120" Padding="10" FontSize="14" Background="#ff0000" Foreground="#ffffff" Click="OnSpeedUpClick" />
+                <Button x:Name="MaintainSpeedButton" Content="Maintain Speed" Width="120" Padding="10" FontSize="14" Background="#0099ff" Foreground="#ffffff" Click="OnMaintainSpeedClick" />
+                <Button x:Name="PitStopButton" Content="Pit Stop" Width="120" Padding="10" FontSize="14" Background="#ffaa00" Foreground="#ffffff" Click="OnPitStopClick" />
+            </StackPanel>
+
+            <!-- Reset Button -->
+            <Button x:Name="ResetButton" Content="Reset Race" Width="150" Padding="10" FontSize="14" Background="#666666" Foreground="#ffffff" HorizontalAlignment="Center" Click="OnResetClick" />
+
+            <!-- Message Display -->
+            <TextBlock x:Name="MessageLabel" Text="" FontSize="12" Foreground="#ff6666" TextAlignment="Center" TextWrapping="Wrap" />
+        </StackPanel>
+    </ScrollViewer>
+</Window>

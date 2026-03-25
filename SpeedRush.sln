@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedRush", "SpeedRush\SpeedRush.csproj", "{9B48D5BE-8470-4A6A-A038-21C9AFDF87BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedRush.Tests", "SpeedRush.Tests\SpeedRush.Tests.csproj", "{D4AC1F10-DF1B-449F-9713-E68EA701DEA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B48D5BE-8470-4A6A-A038-21C9AFDF87BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B48D5BE-8470-4A6A-A038-21C9AFDF87BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B48D5BE-8470-4A6A-A038-21C9AFDF87BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B48D5BE-8470-4A6A-A038-21C9AFDF87BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AC1F10-DF1B-449F-9713-E68EA701DEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AC1F10-DF1B-449F-9713-E68EA701DEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AC1F10-DF1B-449F-9713-E68EA701DEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AC1F10-DF1B-449F-9713-E68EA701DEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
